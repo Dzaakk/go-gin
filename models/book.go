@@ -1,8 +1,13 @@
 package models
 
-import "encoding/json"
+import "time"
 
-type BookInput struct {
-	Title string      `json:"title" binding:"required"`
-	Price json.Number `json:"price" binding:"required,number"`
+type Book struct {
+	ID          int
+	Title       string
+	Description string
+	Price       int
+	Rating      int
+	CreatedAt   time.Time
+	UpdatedAt   time.Time
 }
